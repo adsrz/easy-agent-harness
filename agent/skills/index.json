@@ -1,0 +1,83 @@
+{
+  "version": "0.1",
+  "skills": [
+    {
+      "id": "repo-ops-and-boundary",
+      "path": "agent/skills/repo-ops-and-boundary/SKILL.md",
+      "use_when": [
+        "repo-safe validation should run before or after a change",
+        "public-boundary checks are part of the task",
+        "the current support slice needs explicit scope repair"
+      ],
+      "requires": [
+        "one primary lane",
+        "explicit public-safe scope"
+      ],
+      "outputs": [
+        "scope classification",
+        "checks run",
+        "boundary note",
+        "public result summary",
+        "next slice risk if any"
+      ]
+    },
+    {
+      "id": "ops-handoff",
+      "path": "agent/skills/ops-handoff/SKILL.md",
+      "use_when": [
+        "the packet should move into ops ownership",
+        "teaching and support work should stop sharing one owner",
+        "a support packet needs an explicit handoff boundary"
+      ],
+      "requires": [
+        "one packet owner at a time",
+        "explicit ops-shaped goal"
+      ],
+      "outputs": [
+        "handoff reason",
+        "ops goal",
+        "scope classification",
+        "canonical surfaces in scope",
+        "validators likely needed"
+      ]
+    },
+    {
+      "id": "repair-scope",
+      "path": "agent/skills/repair-scope/SKILL.md",
+      "use_when": [
+        "the right patch home is ambiguous",
+        "the nearest symptom may not be the recurrence-killing fix",
+        "a support repair needs explicit scope classification before implementation"
+      ],
+      "requires": [
+        "explicit repair target",
+        "candidate patch homes"
+      ],
+      "outputs": [
+        "scope classification",
+        "patch home",
+        "under-repair risk",
+        "local instance fix",
+        "promoted fix or none"
+      ]
+    },
+    {
+      "id": "execution-receipt",
+      "path": "agent/skills/execution-receipt/SKILL.md",
+      "use_when": [
+        "an ops-shaped packet needs compact close-out evidence",
+        "managerial triage should stay inspectable after implementation",
+        "a runnable check or its absence should be explicit at close-out"
+      ],
+      "requires": [
+        "ops-shaped packet",
+        "clear local-now work or a clear reason none existed"
+      ],
+      "outputs": [
+        "managerial-triage line",
+        "behavior-check line",
+        "compact operational receipt"
+      ]
+    }
+  ]
+}

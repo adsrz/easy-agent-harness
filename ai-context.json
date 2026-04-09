@@ -1,0 +1,31 @@
+{
+  "version": "0.1",
+  "repo_type": "study-owned public companion support layer",
+  "canonical_owner": "study",
+  "current_slice": "repo-safe validation and public-boundary bootstrap",
+  "shared_read_set": [
+    "AI_CONTEXT.md",
+    "AGENTS.md",
+    "system.md",
+    "agent/README.md"
+  ],
+  "lanes": {
+    "repo-ops": {
+      "use_for": [
+        "repo validation",
+        "repo-safe maintenance",
+        "public onboarding repair"
+      ]
+    },
+    "public-export": {
+      "use_for": [
+        "public-boundary checks",
+        "support-slice packaging",
+        "scope-shaping edits"
+      ]
+    }
+  },
+  "first_commands": [
+    "pwsh -NoProfile -File ./tools/Test-All.ps1 -RepoOnly"
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "version": "0.1",
+  "shared_read_set": [
+    "AI_CONTEXT.md",
+    "AGENTS.md",
+    "system.md",
+    "agent/README.md"
+  ],
+  "default_read_set": [
+    "AI_CONTEXT.md",
+    "AGENTS.md",
+    "system.md",
+    "agent/README.md"
+  ],
+  "lanes": {
+    "repo-ops": {
+      "use_for": [
+        "repo validation",
+        "repo-safe maintenance",
+        "operator onboarding repair"
+      ]
+    },
+    "public-export": {
+      "use_for": [
+        "public-boundary checks",
+        "support-slice packaging",
+        "scope-shaping edits"
+      ]
+    }
+  },
+  "task_types": {
+    "repo-validation": {
+      "primary_lane": "repo-ops",
+      "primary_skill": "agent/skills/repo-ops-and-boundary/SKILL.md",
+      "minimal_read_set": [
+        "agent/skills/repo-ops-and-boundary/SKILL.md",
+        "docs/public-scope.md",
+        "docs/run-with-codex.md"
+      ],
+      "use_when": [
+        "repo-only checks should run",
+        "a public surface changed",
+        "validator or onboarding repair is needed"
+      ]
+    },
+    "packet-owner-handoff": {
+      "primary_lane": "repo-ops",
+      "primary_skill": "agent/skills/ops-handoff/SKILL.md",
+      "minimal_read_set": [
+        "docs/packet-ownership.md",
+        "agent/skills/ops-handoff/SKILL.md",
+        "docs/run-with-codex.md"
+      ],
+      "use_when": [
+        "the packet is now ops-shaped and needs one explicit owner",
+        "teaching and operations responsibilities should stop being blended",
+        "a support packet needs an explicit handoff boundary"
+      ]
+    },
+    "repair-scope-classification": {
+      "primary_lane": "repo-ops",
+      "primary_skill": "agent/skills/repair-scope/SKILL.md",
+      "minimal_read_set": [
+        "docs/repair-scope.md",
+        "agent/skills/repair-scope/SKILL.md",
+        "docs/run-with-codex.md"
+      ],
+      "use_when": [
+        "the fix belongs in one of several possible patch homes",
+        "a support packet needs explicit scope classification before implementation",
+        "the goal is to kill recurrence rather than patch the nearest local symptom"
+      ]
+    },
+    "execution-receipt-closeout": {
+      "primary_lane": "repo-ops",
+      "primary_skill": "agent/skills/execution-receipt/SKILL.md",
+      "minimal_read_set": [
+        "docs/execution-receipts.md",
+        "agent/skills/execution-receipt/SKILL.md",
+        "docs/run-with-codex.md"
+      ],
+      "use_when": [
+        "an ops-shaped packet needs compact operational close-out evidence",
+        "the close-out should preserve managerial triage and runnable verification",
+        "the packet needs a concise execution receipt instead of diffuse prose"
+      ]
+    },
+    "public-boundary-audit": {
+      "primary_lane": "public-export",
+      "primary_skill": "agent/skills/repo-ops-and-boundary/SKILL.md",
+      "minimal_read_set": [
+        "agent/skills/repo-ops-and-boundary/SKILL.md",
+        "docs/public-scope.md",
+        "docs/architecture.md"
+      ],
+      "use_when": [
+        "boundary-sensitive public packaging work is in scope",
+        "the current slice needs explicit scope tightening",
+        "public-safe support surfaces are being admitted or clarified"
+      ]
+    }
+  }
+}
