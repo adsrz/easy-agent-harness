@@ -36,6 +36,7 @@ function Get-RepoRelativePath {
 
 $repoRoot = Split-Path -Parent $PSScriptRoot
 $requiredRepoFiles = @(
+    ".github/workflows/repo-only-validation.yml",
     "AGENTS.md",
     "README.md",
     "README.zh-CN.md",
