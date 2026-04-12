@@ -2,7 +2,7 @@
 
 ## Current Position
 
-The first public push is intentionally narrow.
+The first public push is now shipped and intentionally narrow.
 
 Current shipped support objects:
 
@@ -10,6 +10,7 @@ Current shipped support objects:
 - explicit ops handoff
 - repair scope and patch-home classification
 - execution receipts for ops-shaped packets
+- repo-only workflow enforcement for the public validation surface
 
 ## Next Likely Additions
 
