@@ -1,6 +1,6 @@
 # AI Context
 
-This is the shortest safe entrypoint for an AI agent opening `Study Superpowers`.
+This is the shortest safe entrypoint for an AI agent opening `Easy Agent Harness`.
 
 Machine-readable companions:
 
@@ -10,11 +10,11 @@ Machine-readable companions:
 
 ## Identity
 
-- `repo_type`: study-owned public companion support layer
-- `primary_goal`: publish modular public-safe support-system slices derived from `study`
-- `current_slice`: repo-safe validation, public-boundary bootstrap, explicit ops handoff, repair scope classification, and execution receipts
-- `positioning`: operator superpowers for a study-shaped system, not a generic managed-agent base
-- `not_this`: not the canonical doctrine source, not a mirror of private runtime state, not a generic managed-agent base
+- `repo_type`: study-owned public low-code agent harness
+- `primary_goal`: make everyday agent use more accessible through explicit rules, readable control surfaces, and predictable behavior
+- `current_core`: repo-safe validation, public-boundary bootstrap, AI-facing onboarding, and the control spine `ops-handoff -> repair-scope -> execution-receipt`
+- `positioning`: beginner-friendly and low-code, not a code-first framework
+- `not_this`: not the canonical doctrine source, not a mirror of private runtime state, not a prompt-tricks pack
 
 ## Fast Read Order
 
@@ -49,7 +49,7 @@ If the task is about how to close an ops-shaped packet with compact operational 
 - `repo-ops`
   - use for repo validation, repo-safe maintenance, or onboarding-surface repair
 - `public-export`
-  - use for public-boundary checks, support-slice packaging, or scope-shaping edits
+  - use for public-boundary checks, harness-core packaging, or scope-shaping edits
 
 Use exactly one lane per substantive packet.
 

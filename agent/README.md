@@ -1,6 +1,6 @@
 # Agent Layer
 
-This folder exposes the minimal public-safe agent layer for the current `Study Superpowers` slice.
+This folder exposes the minimal public-safe agent layer for the current `Easy Agent Harness` core.
 
 ## What Is Included
 

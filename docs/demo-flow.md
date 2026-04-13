@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This walkthrough shows how the first public push fits together as one support loop.
+This walkthrough shows how the first public harness release fits together as one control loop.
 
 The loop is:
 
@@ -69,7 +69,7 @@ behavior-check: pwsh -NoProfile -File ./tools/Test-All.ps1 -RepoOnly passed.
 
 The point is not just that the repo has three docs and three skills.
 
-The point is that they compose into one support loop:
+The point is that they compose into one control spine for a readable, low-code harness:
 
 - ownership first
 - patch home second

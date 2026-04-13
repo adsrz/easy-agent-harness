@@ -2,20 +2,24 @@
   <a href="./README.md">English</a> | <a href="./README.zh-CN.md">简体中文</a>
 </div>
 
-# Study Superpowers
+# Easy Agent Harness
 
-`Type: Support Layer` `Owner: study-derived` `Mode: Public Companion`
+`Type: Low-Code Harness` `Owner: study-derived` `Mode: Public Base`
 
-`Study Superpowers` is a study-owned public companion repo for modular support-system slices that are safe to publish independently.
+`Easy Agent Harness` is a study-owned public repo for a beginner-friendly, low-code agent harness.
 
-It is intentionally narrower than the private `study` workspace, and different from `learning-os`.
+It is built for ordinary users who want agents to handle everyday requests without first buying into a coding-first CLI workflow.
+
+It favors explicit rules, readable control surfaces, and predictable behavior over prompt magic or framework cleverness.
+
+It is intentionally smaller than the private `study` workspace, and different from `learning-os`.
 
 - `study`
   canonical private owner
 - `learning-os`
   public learning harness
-- `study-superpowers`
-  public companion support layer for low-coupling operator surfaces
+- `easy-agent-harness`
+  public low-code agent harness baseline
 
 Proof first: verify the repo-safe surface, inspect one compact support loop, then read the deeper docs.
 
@@ -23,40 +27,33 @@ Proof first: verify the repo-safe surface, inspect one compact support loop, the
 
 The public positioning is:
 
-- operator superpowers for a `study`-shaped system
-- boundary-conscious support slices, not a generic platform
-- public companion result, not canonical doctrine
+- beginner-friendly and low-code, not code-first
+- a rules-first harness for everyday agent use
+- public baseline, not canonical doctrine
+- local-first and machine-readable where that reduces ambiguity
 
-The current name stays as `study-superpowers` for the first push because the `study-` prefix keeps ownership explicit, while `superpowers` makes the modular capability framing legible without pretending this repo is a full managed-agent base.
+The repo moved from `study-superpowers` to `study-agent-harness`, and now to `easy-agent-harness`.
 
-## Current Slice
+The current name keeps the artifact type legible while lowering first-click friction. `low-code` belongs in the positioning, not in the slug.
 
-The first shipped layer is deliberately small:
+## Current Harness Core
+
+The current public release is still deliberately small.
+
+It ships the control spine of the harness rather than a giant task catalog:
 
 - repo-safe validation entrypoints
-- public-boundary bootstrap rules
-- AI-facing operator onboarding
-- one minimal operator skill for validation and boundary work
-
-The first non-bootstrap support slice is:
-
+- public-boundary bootstrap
+- AI-facing onboarding and machine-readable routing
 - explicit packet ownership handoff for ops-shaped work
-
-That means this repo now ships one real support pattern beyond bootstrap: how to move a packet into ops ownership without leaving two competing owners alive.
-
-The second non-bootstrap support slice is:
-
 - repair scope and patch-home classification
+- execution receipts for ops-shaped packets
 
-That makes the public support layer more actionable: after ownership is explicit, the next question is where the fix actually belongs.
+That control loop is:
 
-The third non-bootstrap support slice is:
+`ops-handoff -> repair-scope -> execution-receipt`
 
-- execution receipt for ops-shaped packets
-
-That closes the loop: after ownership and patch-home are clear, the packet should leave a compact record of what stayed local now and what runnable check actually tested the claim.
-
-This repo is not trying to ship the full private support stack on day one.
+This repo is not trying to mirror the full private workspace on day one. The current release is the readable, verifiable control core.
 
 ## Proof Lane
 
@@ -77,24 +74,28 @@ Then open:
 
 - [docs/demo-flow.md](docs/demo-flow.md)
 
-That demo shows the first shipped support loop end to end:
+That demo shows the current harness control loop end to end:
 
 `ops-handoff -> repair-scope -> execution-receipt`
 
 ## Why This Repo Exists
 
-Some support-system surfaces inside `study` are low-coupling enough to stand on their own publicly, but they do not belong in `learning-os`.
+Many public agent repos assume strong coding ability, terminal fluency, or a willingness to live inside a developer-first framework.
 
-This repo is the place for those slices when they are:
+This repo chooses another tradeoff:
 
-- public-safe
-- modular enough to use independently
-- still clearly derived from `study`
+- lower code burden
+- clearer rules and boundaries
+- smaller readable surfaces
+- predictable execution and validation
+- honest separation between public result and private maintainer state
+
+The current public core is still narrow, but the direction is broader than a single support slice: it is meant to be the base harness for ordinary rule-driven agent use.
 
 ## Repo Map
 
 - [CHANGELOG.md](CHANGELOG.md)
-  public release history for the companion repo
+  public release history for the harness repo
 - [ROADMAP.md](ROADMAP.md)
   near-term public-facing priorities
 - [CONTRIBUTING.md](CONTRIBUTING.md)
@@ -136,6 +137,8 @@ This repo is the place for those slices when they are:
   Run the repo-only checks, then open [docs/demo-flow.md](docs/demo-flow.md).
 - `AI agent entry`
   Start with [AI_CONTEXT.md](AI_CONTEXT.md), then [task-router.json](task-router.json).
+- `Beginner-facing direction`
+  Use [ROADMAP.md](ROADMAP.md) to see which ordinary-use proof or onboarding surface should land next.
 - `Contribution and roadmap`
   Use [ROADMAP.md](ROADMAP.md), [CONTRIBUTING.md](CONTRIBUTING.md), and [CHANGELOG.md](CHANGELOG.md).
 
@@ -148,5 +151,6 @@ This public repo does not include:
 - maintainer-only working files
 - private logs or runtime memory
 - a mirror of the full private support stack
+- a code-first framework posture disguised as beginner tooling
 
 The canonical owner remains `study`.

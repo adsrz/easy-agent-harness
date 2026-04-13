@@ -2,20 +2,24 @@
   <a href="./README.md">English</a> | <a href="./README.zh-CN.md">简体中文</a>
 </div>
 
-# Study Superpowers
+# Easy Agent Harness
 
-`类型：Support Layer` `来源：study 派生` `模式：Public Companion`
+`类型：Low-Code Harness` `来源：study 派生` `模式：Public Base`
 
-`Study Superpowers` 是一个从 `study` 派生出来的公开 companion repo，用来逐步发布那些已经足够低耦合、可以单独公开的支持系统切片。
+`Easy Agent Harness` 是一个从 `study` 派生出来的公开、低代码 agent harness。
 
-它故意比私有 `study` 更窄，也不同于 `learning-os`：
+它面向的是普通用户和弱编程用户：希望 agent 能承接日常要求，但又不想先接受一整套编程导向、CLI 导向、框架导向的门槛。
+
+它更强调明确规则、可读控制面和可预测执行，而不是 prompt 花活或复杂框架。
+
+它故意比私有 `study` 更小，也不同于 `learning-os`：
 
 - `study`
   私有 canonical owner
 - `learning-os`
   面向外部的学习 harness
-- `study-superpowers`
-  面向 operator 的公共 support layer
+- `easy-agent-harness`
+  面向普通使用场景的公共低代码 harness 基座
 
 建议先看 proof：先验证 repo-safe 表面，再看一个紧凑 support loop，最后再读 deeper docs。
 
@@ -23,40 +27,33 @@
 
 对外定位是：
 
-- 服务于 `study` 这类系统的 operator superpowers
-- 强边界意识的 support slices，不是通用平台
-- public companion result，不是 canonical doctrine
+- 面向普通使用场景的低代码 agent harness
+- 规则明确、边界清楚，不走编程优先路线
+- public baseline，不是 canonical doctrine
+- 在能降低歧义时优先保留本地可验证、机器可读表面
 
-当前先保留 `study-superpowers` 这个名字，因为 `study-` 前缀能明确 ownership，`superpowers` 又能表达模块化能力切片，而不会把它包装成完整 managed-agent base。
+仓库经历了 `study-superpowers -> study-agent-harness -> easy-agent-harness` 这次连续重命名。
 
-## 当前切片
+现在这个名字保留了 `agent-harness` 这个对象类型，同时把 `low-code` 留在定位说明里，而不是硬塞进 slug。
 
-第一批公开内容刻意保持很小：
+## 当前 Harness Core
+
+当前公开版本仍然刻意保持很小。
+
+它先公开的是 harness 的控制主干，而不是一个很大的任务目录：
 
 - repo-safe 校验入口
-- public-boundary bootstrap 规则
-- AI 面向的 operator onboarding
-- 一个最小 operator skill
-
-第一个 non-bootstrap support slice 是：
-
+- public-boundary bootstrap
+- AI 面向的 onboarding 和 machine-readable routing
 - 明确的 `ops handoff / packet ownership handoff`
-
-也就是说，这个 repo 现在除了 bootstrap 之外，已经开始公开一个真正的支持系统模式：怎样把 packet 切到 ops ownership，而不留下两个并行 owner。
-
-第二个 non-bootstrap support slice 是：
-
 - `repair scope / patch home classification`
-
-也就是 ownership 明确之后，下一步要回答的问题：修复到底该落在哪个 patch home，而不是先动手再补理由。
-
-第三个 non-bootstrap support slice 是：
-
 - `execution receipt / managerial-triage + behavior-check`
 
-这样三步就闭环了：先明确 owner，再明确 patch home，最后留下一个紧凑但可核查的 operational close-out receipt。
+这条控制链路是：
 
-这不是一次性把整个私有 support stack 搬出来。
+`ops-handoff -> repair-scope -> execution-receipt`
+
+这个仓库现在不是在一天内搬出整个私有工作区，而是先把最可读、最可验证的控制核心公开出来。
 
 ## 验证方式
 
@@ -75,19 +72,23 @@ pwsh -NoProfile -File ./tools/Test-All.ps1 -RepoOnly
 
 - [docs/demo-flow.md](docs/demo-flow.md)
 
-这个 demo 会把第一批 support loop 串起来：
+这个 demo 会把当前 harness control loop 串起来：
 
 `ops-handoff -> repair-scope -> execution-receipt`
 
 ## 这个仓库的作用
 
-`study` 里有一些支持系统表面已经足够模块化，适合单独公开；但它们又不该直接塞进 `learning-os`。
+很多公开 agent 仓库默认你已经会写代码、习惯终端、也愿意接受 developer-first 的工作方式。
 
-这个仓库就是这些切片的 public companion：
+这个仓库选的是另一种取舍：
 
-- 必须 public-safe
-- 必须足够模块化
-- 但仍然明确从属于 `study`
+- 更低的代码负担
+- 更清楚的规则和边界
+- 更小、更容易读懂的控制面
+- 更可预测的执行与验证
+- 明确把 public result 和 private maintainer state 分开
+
+当前公开内容仍然很窄，但方向已经不只是“单个 support slice”，而是面向日常使用的基础 harness。
 
 ## 边界
 
@@ -98,6 +99,7 @@ pwsh -NoProfile -File ./tools/Test-All.ps1 -RepoOnly
 - maintainer-only working files
 - 私有日志或 runtime memory
 - 私有 support stack 的完整镜像
+- 披着新手外衣的 code-first framework
 
 canonical owner 仍然是 `study`。
 
@@ -107,5 +109,7 @@ canonical owner 仍然是 `study`。
   先跑 repo-only 校验，再打开 [docs/demo-flow.md](docs/demo-flow.md)。
 - `AI agent 入口`
   从 [AI_CONTEXT.md](AI_CONTEXT.md) 和 [task-router.json](task-router.json) 开始。
+- `普通用户方向`
+  从 [ROADMAP.md](ROADMAP.md) 看下一步应该补哪类 ordinary-use proof 或 onboarding surface。
 - `贡献与路线图`
   使用 [ROADMAP.md](ROADMAP.md)、[CONTRIBUTING.md](CONTRIBUTING.md) 和 [CHANGELOG.md](CHANGELOG.md)。

@@ -2,8 +2,8 @@
 
 ## Role
 - Be the public-safe operator for this repository.
-- Treat this repo as a study-owned public companion support layer, not as a doctrine source.
-- Keep scope narrow: current shipped slice is `repo-safe validation + public-boundary bootstrap`.
+- Treat this repo as a study-owned public low-code agent harness, not as a doctrine source.
+- Keep the current public harness core explicit: `repo-safe validation + public-boundary bootstrap + control spine`.
 
 ## Short Read Path
 - Read `AI_CONTEXT.md`, `system.md`, `agent/README.md`, and `docs/public-scope.md`.
@@ -26,15 +26,16 @@
 
 ## Main Duties
 - Keep private maintainer routing and private runtime state out of this repo.
+- Keep the public harness readable for weaker coders and ordinary users.
 - Prefer explicit operator-readable and AI-readable surfaces over hidden assumptions.
 - Run repo validation before claiming the public slice is healthy.
 - Keep this repository useful even when read without the private `study` workspace.
 
 ## Guardrails
 - Do not create maintainer-only working-state files here.
-- Do not present this repo as a generic managed-agent base.
+- Do not present this repo as prompt magic or as a code-first framework.
 - Do not imply that this repo owns `study` doctrine.
-- Do not widen the public slice by accident; make scope explicit in public docs.
+- Do not widen the public harness core by accident; make scope explicit in public docs.
 
 ## Completion Gate
 - If public surfaces or tooling changed, run `pwsh -NoProfile -File ./tools/Test-All.ps1 -RepoOnly`.

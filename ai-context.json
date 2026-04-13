@@ -1,8 +1,9 @@
 {
   "version": "0.1",
-  "repo_type": "study-owned public companion support layer",
+  "repo_type": "study-owned public low-code agent harness",
   "canonical_owner": "study",
-  "current_slice": "repo-safe validation and public-boundary bootstrap",
+  "current_slice": "repo-safe validation, public-boundary bootstrap, and the control spine for the current public release",
+  "current_core": "repo-safe validation, public-boundary bootstrap, AI-facing onboarding, and the control spine ops-handoff -> repair-scope -> execution-receipt",
   "shared_read_set": [
     "AI_CONTEXT.md",
     "AGENTS.md",
@@ -20,7 +21,7 @@
     "public-export": {
       "use_for": [
         "public-boundary checks",
-        "support-slice packaging",
+        "harness-core packaging",
         "scope-shaping edits"
       ]
     }

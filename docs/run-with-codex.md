@@ -1,6 +1,6 @@
 # Run With Codex
 
-Use this repository as a public-safe operator slice, not as the canonical owner of a private workspace.
+Use this repository as a low-code public harness baseline, not as the canonical owner of a private workspace.
 
 ## Minimal Flow
 
@@ -14,7 +14,7 @@ Use this repository as a public-safe operator slice, not as the canonical owner 
 
 - repo-safe validation
 - public-boundary checks
-- support-slice packaging edits
+- harness-core packaging edits
 - AI-facing onboarding repair
 - packet-owner handoff into ops-shaped work
 - repair-scope and patch-home choice before implementation
@@ -26,3 +26,4 @@ Use this repository as a public-safe operator slice, not as the canonical owner 
 - private doctrine repair
 - private runtime logging
 - bulk export of loosely related support surfaces
+- code-first framework experiments that make the repo harder for weaker coders

@@ -2,10 +2,11 @@
 
 ## Purpose
 
-This repo exists because some support-system surfaces are:
+This repo exists because some agent-control surfaces are:
 
 - too useful to remain fully private
-- too operator-facing to belong inside `learning-os`
+- too general and control-oriented to live only inside `learning-os`
+- valuable for weaker coders who need a lower-code baseline for ordinary agent use
 - still clearly derived from `study`
 
 ## Topology
@@ -15,39 +16,41 @@ study
   -> canonical doctrine, private owner state, export rules
 learning-os
   -> public learning harness
-study-superpowers
-  -> public companion support layer
+easy-agent-harness
+  -> public low-code agent harness baseline
 ```
 
 ## Naming Decision
 
-For the first public push, keep the repo name as `study-superpowers`.
+The repo is now named `easy-agent-harness`.
 
+- `easy`
+  lowers first-click friction for ordinary users
+- `agent-harness`
+  makes the artifact type legible
 - `study-`
-  keeps the canonical owner relationship explicit
+  was dropped from the public name because private lineage belongs in the description, not in the slug
 - `superpowers`
-  communicates modular operator capabilities better than a generic support-system label
-
-Rename only if the repo later grows beyond a clearly study-owned companion identity.
+  was retired because it sounded like tricks rather than control
 
 ## Current Public Object
 
-The current public object is not "the whole support system".
+The current public object is not the whole private workspace and not a giant framework.
 
-It is a narrow support layer:
+It is the baseline harness core:
 
 - validation entrypoints
 - boundary bootstrap
-- AI-facing operator guidance
+- AI-facing onboarding and machine-readable routing
 - explicit packet ownership handoff for ops-shaped work
 - repair scope and patch-home classification
 - execution receipts for ops-shaped packet close-out
 
-The first non-bootstrap slice was chosen because it stays useful outside the private workspace while avoiding private write-back, logging, and maintainer-state surfaces.
+This is the control spine of the current public harness. It gives the repo a readable, verifiable base before any larger task layer is admitted.
 
 ## Boundary Rule
 
-`study-superpowers` can expose public-safe support components and public-facing explanations.
+`easy-agent-harness` can expose public-safe harness components and public-facing explanations.
 
 It should not absorb:
 
@@ -58,10 +61,11 @@ It should not absorb:
 
 ## Expansion Rule
 
-Future slices should be admitted one by one.
+Future harness-core additions should be admitted one by one.
 
-A new slice belongs here only if it is:
+A new surface belongs here only if it is:
 
-- low-coupling
-- operator-meaningful on its own
+- low-code and beginner-readable
+- helpful for ordinary agent use
 - safe to publish without private runtime state
+- consistent with explicit rules and predictable behavior

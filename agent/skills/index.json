@@ -7,7 +7,7 @@
       "use_when": [
         "repo-safe validation should run before or after a change",
         "public-boundary checks are part of the task",
-        "the current support slice needs explicit scope repair"
+        "the current harness core needs explicit scope repair"
       ],
       "requires": [
         "one primary lane",
@@ -18,7 +18,7 @@
         "checks run",
         "boundary note",
         "public result summary",
-        "next slice risk if any"
+        "next harness-core risk if any"
       ]
     },
     {
@@ -47,7 +47,7 @@
       "use_when": [
         "the right patch home is ambiguous",
         "the nearest symptom may not be the recurrence-killing fix",
-        "a support repair needs explicit scope classification before implementation"
+        "a harness repair needs explicit scope classification before implementation"
       ],
       "requires": [
         "explicit repair target",

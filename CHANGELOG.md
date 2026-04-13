@@ -1,10 +1,44 @@
 # Changelog
 
-All notable changes to `Study Superpowers` will be documented here.
+All notable changes to `Easy Agent Harness` will be documented here.
 
-## Unreleased - 2026-04-12
+## Unreleased - 2026-04-13
 
-Post-push hardening for the first public slice.
+Renamed the public repo from `Study Agent Harness` to `Easy Agent Harness`.
+
+Included in this identity pass:
+
+- renamed the sibling repo and private owner bundle to `easy-agent-harness`
+- kept the beginner-friendly, low-code agent harness positioning while dropping the `study-` prefix from the public-facing name
+- clarified that the current public release is still centered on the control spine `ops-handoff -> repair-scope -> execution-receipt`
+- updated README, AI context, architecture, roadmap, and contribution surfaces to match the new naming
+
+Non-goals:
+
+- no private maintainer state
+- no mirror of the full private support stack
+- no code-first framework positioning
+
+## 0.1.1 - 2026-04-13
+
+Renamed and repositioned the public repo from `Study Superpowers` to `Study Agent Harness`.
+
+Included in that identity pass:
+
+- renamed the sibling repo and private owner bundle to `study-agent-harness`
+- reframed the public repo as a beginner-friendly, low-code agent harness baseline
+- clarified that the current public release is still centered on the control spine `ops-handoff -> repair-scope -> execution-receipt`
+- updated README, AI context, architecture, roadmap, and contribution surfaces to match the new positioning
+
+Non-goals:
+
+- no private maintainer state
+- no mirror of the full private support stack
+- no code-first framework positioning
+
+## 0.1.0 - 2026-04-12
+
+Post-push hardening for the first public release.
 
 Included in this maintenance pass:
 
@@ -18,9 +52,9 @@ Non-goals:
 - no private maintainer state
 - no widening into a mirror of the private support stack
 
-## 0.1.0 - Initial Public Push
+## 0.0.1 - Initial Public Push
 
-Initial public companion release.
+Initial public release under the name `Study Superpowers`.
 
 Included in this first push:
 

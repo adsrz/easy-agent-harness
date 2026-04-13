@@ -23,7 +23,7 @@
     "public-export": {
       "use_for": [
         "public-boundary checks",
-        "support-slice packaging",
+        "harness-core packaging",
         "scope-shaping edits"
       ]
     }
@@ -54,7 +54,7 @@
       "use_when": [
         "the packet is now ops-shaped and needs one explicit owner",
         "teaching and operations responsibilities should stop being blended",
-        "a support packet needs an explicit handoff boundary"
+        "a harness packet needs an explicit handoff boundary"
       ]
     },
     "repair-scope-classification": {
@@ -67,7 +67,7 @@
       ],
       "use_when": [
         "the fix belongs in one of several possible patch homes",
-        "a support packet needs explicit scope classification before implementation",
+        "a harness packet needs explicit scope classification before implementation",
         "the goal is to kill recurrence rather than patch the nearest local symptom"
       ]
     },
@@ -95,8 +95,8 @@
       ],
       "use_when": [
         "boundary-sensitive public packaging work is in scope",
-        "the current slice needs explicit scope tightening",
-        "public-safe support surfaces are being admitted or clarified"
+        "the current harness core needs explicit scope tightening",
+        "public-safe harness surfaces are being admitted or clarified"
       ]
     }
   }

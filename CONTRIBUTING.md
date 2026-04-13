@@ -2,14 +2,15 @@
 
 ## Scope
 
-Contributions should keep `Study Superpowers` narrow, public-safe, and clearly derived from `study`.
+Contributions should keep `Easy Agent Harness` beginner-friendly, public-safe, and clearly derived from `study`.
 
 Good fits:
 
-- clarify public support contracts
-- improve onboarding and proof surfaces
+- clarify harness boundaries and rules
+- improve beginner-facing onboarding and proof surfaces
 - refine repo-safe validation
-- add a new independently legible support slice
+- add a new independently legible harness-core surface
+- add one honest ordinary-request demo that proves the harness without relying on private state
 
 Bad fits:
 
@@ -37,6 +38,6 @@ pwsh -NoProfile -File ./tools/Test-All.ps1 -RepoOnly
 
 ## Change Rule
 
-Prefer one coherent support object per change batch.
+Prefer one coherent harness-core object per change batch.
 
-If a change widens the public slice, the widened object should still be independently legible and should not rely on private `study` state to make sense.
+If a change widens the public harness core, the widened object should still be independently legible and should not rely on private `study` state to make sense.
