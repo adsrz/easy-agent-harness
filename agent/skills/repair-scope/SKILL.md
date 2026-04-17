@@ -1,13 +1,13 @@
 ---
 name: repair-scope
-description: Classify repair scope and choose the real patch home before implementing a support-system fix.
+description: Classify repair scope and choose the real repair target before implementing a support-system fix.
 ---
 
 # Repair Scope
 
 ## Use When
 
-- more than one patch home looks plausible
+- more than one repair target looks plausible
 - the nearest symptom may not be the recurrence-killing fix
 - a support repair needs explicit scope classification before implementation
 
@@ -20,20 +20,22 @@ description: Classify repair scope and choose the real patch home before impleme
 ## Workflow
 
 1. Name the actual object under repair.
-2. List the plausible patch homes.
+2. List the plausible repair targets.
 3. Decide whether the defect is local or shared.
-4. State the under-repair risk if the patch stays too local.
-5. Choose the patch home that kills recurrence.
-6. If the live packet still needs a local symptom repair, say so separately.
+4. State the validation path for the chosen owner set.
+5. State the under-repair risk if the patch stays too local.
+6. Choose the repair target that kills recurrence.
+7. If the live packet still needs a local symptom repair, say so separately.
 
 ## Visible Output
 
 Use a compact shape such as:
 
-`Scope classification: <...>. Patch home: <...>.`
+`Scope classification: <...>. Repair target: <...>.`
 
 Then state:
 
+- `Validation path`
 - `Under-repair risk`
 - `Local instance fix`
 - `Promoted fix` or `none`

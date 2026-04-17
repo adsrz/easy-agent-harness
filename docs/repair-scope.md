@@ -5,13 +5,13 @@
 This document exposes one public-safe support pattern:
 
 - classify the repair before implementing it
-- choose the real patch home instead of patching the nearest visible symptom
+- choose the real repair target instead of patching the nearest visible symptom
 
 ## Use When
 
 - multiple files or layers could plausibly own the fix
 - a local symptom may point to a wider recurring failure
-- the support packet needs an explicit patch-home choice before implementation
+- the support packet needs an explicit repair-target choice before implementation
 
 ## Core Questions
 
@@ -26,10 +26,11 @@ Ask these first:
 
 Use a compact receipt such as:
 
-`Scope classification: <...>. Patch home: <...>.`
+`Scope classification: <...>. Repair target: <...>.`
 
 Then make the repair logic explicit:
 
+- `Validation path`: what check or audit will falsify the chosen owner set
 - `Under-repair risk`: what stays broken if the patch is too local
 - `Local instance fix`: what the current packet may still need locally
 - `Promoted fix`: the shared owner change that prevents recurrence, or `none`
@@ -38,7 +39,10 @@ Then make the repair logic explicit:
 
 ```text
 Scope classification: shared support protocol.
-Patch home: docs/repair-scope.md and agent/skills/repair-scope/SKILL.md
+Repair target: docs/repair-scope.md and agent/skills/repair-scope/SKILL.md
+
+Validation path:
+- rerun the repo-only validator after the rule change
 
 Under-repair risk:
 - fixing only one validator output would leave the same misclassification path alive

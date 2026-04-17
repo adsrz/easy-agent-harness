@@ -12,6 +12,7 @@ Included in this identity pass:
 - kept the beginner-friendly, low-code agent harness positioning while dropping the `study-` prefix from the public-facing name
 - clarified that the current public release is still centered on the control spine `ops-handoff -> repair-scope -> execution-receipt`
 - updated README, AI context, architecture, roadmap, and contribution surfaces to match the new naming
+- synced the public `ops-handoff` contract and boundary validator coverage with the current `study` support-system cut
 
 Non-goals:
 

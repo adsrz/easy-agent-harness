@@ -90,12 +90,29 @@ $forbiddenReferencePatterns = @(
 )
 
 $forbiddenReferenceFiles = @(
+    "AGENTS.md",
     "README.md",
     "README.zh-CN.md",
     "AI_CONTEXT.md",
+    "ai-context.json",
+    "CHANGELOG.md",
+    "ROADMAP.md",
+    "CONTRIBUTING.md",
+    "task-router.json",
     "system.md",
+    "agent/README.md",
+    "agent/skills/index.json",
     "docs/public-scope.md",
-    "docs/run-with-codex.md"
+    "docs/architecture.md",
+    "docs/demo-flow.md",
+    "docs/packet-ownership.md",
+    "docs/repair-scope.md",
+    "docs/execution-receipts.md",
+    "docs/run-with-codex.md",
+    "agent/skills/repo-ops-and-boundary/SKILL.md",
+    "agent/skills/ops-handoff/SKILL.md",
+    "agent/skills/repair-scope/SKILL.md",
+    "agent/skills/execution-receipt/SKILL.md"
 )
 
 foreach ($relativePath in $forbiddenReferenceFiles) {

@@ -26,6 +26,7 @@ Result shape:
 ```text
 Packet owner: Operations Coordinator.
 Reason: the packet is now validator and repo repair rather than teaching.
+Acceptance object: restore the repo-facing route contract without leaving a shadow teaching owner alive.
 ```
 
 ### Step 2: Choose Patch Home
@@ -39,7 +40,10 @@ Result shape:
 
 ```text
 Scope classification: shared support protocol.
-Patch home: task-router.json and the owning support docs.
+Repair target: task-router.json and the owning support docs.
+
+Validation path:
+- rerun pwsh -NoProfile -File ./tools/Test-All.ps1 -RepoOnly after the route fix
 
 Under-repair risk:
 - fixing only one local symptom would leave the same routing miss alive

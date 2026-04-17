@@ -25,9 +25,12 @@ Keep the handoff small but explicit:
 
 - reason the packet is now ops-owned
 - exact ops goal
+- underlying object under repair
+- acceptance object
+- patch home or repair target
 - canonical files or tools in scope
 - constraints that must survive
-- validators or checks likely needed
+- validation path and likely validators
 - failure modes to avoid
 
 ## Example
